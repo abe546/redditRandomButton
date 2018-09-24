@@ -3,7 +3,8 @@ var BACK = "back";
 var CURRENT = "current";
 var ON = "on";
 var OFF = "off";
-var RANDOM_URL = "https://old.reddit.com/random/";
+var RANDOM_THREAD = "https://old.reddit.com/random/";
+var RANDOM_SUBREDDIT = "https://old.reddit.com/r/random/";
 
 window.onload=function start()
 {
@@ -60,7 +61,7 @@ $(document).keydown(function(e){
  {
    if(isOn()==1)
    {
-	 window.location.replace(RANDOM_URL);
+	 window.location.replace(RANDOM_SUBREDDIT);
    updateValues(window.location.href);
    }
  }
