@@ -32,7 +32,10 @@ function updateValues(variable)
 {
 
 	//console.log("In old");
+  if(getOldSite() != getCurrentSite())
+  {
 	localStorage.setItem(BACK,localStorage.getItem(CURRENT));
+}
 	localStorage.setItem(CURRENT,variable);
 	console.log("Old result back : "+localStorage.getItem(BACK));
 	console.log("Current : "+localStorage.getItem(CURRENT));
