@@ -17,7 +17,7 @@ window.onload=function start()
   //Do this so that current is set, and then
   //back can be set to what current is also
   setCurrentSite(window.location.href);
-  updateValues(window.location.href);
+
   //Adds on/off button to top of webpage
   prependOnOffButton();
 
@@ -31,6 +31,8 @@ window.onload=function start()
 function updateValues(variable)
 {
 
+  console.log("Old result back BEFORE : "+localStorage.getItem(BACK));
+	console.log("Current BEFORE : "+localStorage.getItem(CURRENT));
 	//console.log("In old");
   if(getOldSite() != getCurrentSite())
   {
