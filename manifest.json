@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Reddit Random Button Util",
   "description":"Used to be even lazier when clicking the reddit random button page.",
-  "version" : "0.0.0",
+  "version" : "0.0.1",
    "browser_action": {
     "default_icon": "/resources/snoo.png"
 	},

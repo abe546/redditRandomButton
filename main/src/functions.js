@@ -6,6 +6,9 @@ var OFF = "off";
 var RANDOM_THREAD = "https://old.reddit.com/random/";
 var RANDOM_SUBREDDIT = "https://old.reddit.com/r/random/";
 
+//List of vars used as IDs
+var backToLastSubreddit = "BackToLastSubreddit";
+
 window.onload=function start()
 {
   console.log("Hello world");
@@ -21,7 +24,11 @@ window.onload=function start()
   //Adds on/off button to top of webpage
   prependOnOffButton();
 
-	var $write = $("<br><a target=\"_blank\" href='https://www.old.reddit.com"+localStorage.getItem(BACK)+"'>Click here, or press the 'b' key, to go back to the last subreddit shown. ("+ localStorage.getItem(BACK) +") </a></br>");
+	var $write = $("<br><a id=\""+backToLastSubreddit+"\" target=\"_blank\" href='"+localStorage.getItem(BACK)+"'>Click here, or press the 'b' key, to go back to the last subreddit shown. ("+ localStorage.getItem(BACK) +") </a></br>");
+
+ $write.prependTo($("body"));
+
+ $write = $("<br><b>Press the 'r' key to find a random subreddit.</b></br>");
 
  $write.prependTo($("body"));
 
